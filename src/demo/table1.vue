@@ -22,10 +22,9 @@ export default {
     return {
       pcDict,
       cityDict: [],
-      options: { border: false },
       listData: [],
       listConfig: {
-        hiddenIndex: false,
+        hiddenIndex: true,
         operateType: 1,
         confirmBeforRemove: false,
         multi: true,
