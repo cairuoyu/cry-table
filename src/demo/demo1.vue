@@ -7,9 +7,11 @@
       :listConfig="listConfig"
       :listData="listData"
       :border="true"
+      @testLinkMethod="testLinkMethod"
       @row-save="rowSave"
       @testButtonMethod1="testButtonMethod1"
       @changeProvince="changeProvince"
+      @row-click="rowClick"
     />
   </div>
 </template>
@@ -24,12 +26,12 @@ export default {
       cityDict: [],
       listData: [],
       listConfig: {
-        hiddenIndex: true,
-        operateType: 1,
-        confirmBeforRemove: false,
-        multi: true,
+        hiddenIndex: true, //是否隐藏序号
+        operateType: 1, //默认按钮类型:1-增删改查四个按钮，2-只有删除按钮
+        confirmBeforRemove: false, //删除前是否确认
+        multi: true, //是否多选
         columns: [
-          { prop: 'country', label: '国家' },
+          { prop: 'country', label: '国家', type: 'link', linkMethod: 'testLinkMethod' },
           {
             prop: 'province',
             label: '省份',
@@ -70,7 +72,7 @@ export default {
           {
             label: '自定义按钮',
             type: 'button',
-            width: '220px',
+            width: '200px',
             options: [
               { buttonName: '按钮1', methodName: 'testButtonMethod1', hiddenKey: 'hk1' },
               { buttonName: '按钮2', methodName: 'testButtonMethod2', hiddenKey: 'hk2', type: 'warning' },
@@ -120,6 +122,9 @@ export default {
     })
   },
   methods: {
+    testLinkMethod(row, rowIndex) {
+      this.$message(row.country)
+    },
     async changeProvince(row, rowIndex) {
       row.cityDict = this.pcDict.find(v => v.code === row.province).children
       row.city = null
@@ -134,9 +139,10 @@ export default {
       this.$set(this.listConfig.columns[2], 'hidden', false)
     },
     testButtonMethod1(row, rowIndex) {
-      row.hk2 = !row.hk2
+      this.$set(row, 'hk2', !row.hk2)
     },
-    rowSave(row, rowIndex) {}
+    rowSave(row, rowIndex) {},
+    rowClick(row, event, column) {}
   }
 }
 </script>

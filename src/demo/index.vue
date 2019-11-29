@@ -1,13 +1,13 @@
 <template>
   <div>
-    <index />
+    <demo1 />
   </div>
 </template>
 
 <script>
-import index from './demo/index'
+import demo1 from './demo1'
 export default {
   name: 'app',
-  components: { index }
+  components: { demo1 }
 }
 </script>
