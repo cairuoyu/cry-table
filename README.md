@@ -1,14 +1,15 @@
 # cry-table
-https://www.npmjs.com/package/cry-table
----
 一个基于vue、element-ui的表格组件demo
 
-![image](./public/demo1.png)
+![image](https://www.javascriptvue.com/f/p2/demo1.png)
+
+---
 ## 功能
 * 行内编辑
 * 行内级联下拉
 * 行内自定义显示隐藏按钮
 * 隐藏显示列
+* ...
 
 ## 安装
 ```bash
@@ -57,3 +58,6 @@ export default {
 }
 </script>
 ```
+
+## live demo
+https://www.javascriptvue.com/frontend/#/demo
