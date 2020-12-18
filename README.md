@@ -1,7 +1,7 @@
 # cry-table
 一个基于vue、element-ui的表格组件demo
 
-![image](https://www.javascriptvue.com/f/p2/demo1.png)
+![image](http://www.cairuoyu.com/screenshots/vue-cry-table.png)
 
 ---
 ## 功能
@@ -60,4 +60,4 @@ export default {
 ```
 
 ## live demo
-https://www.javascriptvue.com/frontend/#/demo
+http://cairuoyu.com/cry-table/
