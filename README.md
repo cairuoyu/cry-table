@@ -1,5 +1,7 @@
 # cry-table
-一个基于vue、element-ui的表格组件demo
+> 一个基于vue、element-ui的表格组件demo
+
+> https://github.com/cairuoyu/cry-table
 
 ![image](http://www.cairuoyu.com/screenshots/vue-cry-table.png)
 
